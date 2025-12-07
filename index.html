@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LightsCameraAction – MVP Audition Tracker (Live Demo)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="logo-dot"></div>
+      <div class="logo-text">LCA</div>
+      <div class="demo-badge">Live MVP Demo</div>
+    </header>
+
+    <p class="tagline">
+      This is a live simulation of the LightsCameraAction audition transparency system – exactly what actors and casting will experience in v1.
+    </p>
+
+    <div class="controls-row">
+      <button id="demo-restart" class="primary-btn">Restart Demo</button>
+      <div class="demo-status">
+        <span id="demo-step-label">Waiting to start…</span>
+      </div>
+    </div>
+
+    <main class="layout">
+      <section class="panel">
+        <div class="panel-label">Actor View</div>
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <header class="header header-actor">
+              <div class="header-title">Audition Tracker</div>
+              <div class="header-sub">Project: LEAD – Hospital Drama</div>
+            </header>
+            <main class="main">
+              <div class="status-list" id="actor-status-list"></div>
+            </main>
+            <footer class="footer">
+              <div class="footer-caption">
+                Actor sees these statuses update in real time as casting clicks on their side.
+              </div>
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-label">Casting View</div>
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <header class="header header-casting">
+              <div class="header-title">Casting Board</div>
+              <div class="header-sub">Project: LEAD – Hospital Drama</div>
+            </header>
+            <main class="main">
+              <div class="casting-detail">
+                <div class="casting-label">Updating audition for:</div>
+                <div class="casting-actor-large">Aaron D. · Lead Role</div>
+
+                <div class="casting-label">Audition status:</div>
+                <div class="status-buttons" id="casting-buttons"></div>
+
+                <div class="casting-feed-label">What just happened</div>
+                <div class="casting-feed" id="casting-feed"></div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
